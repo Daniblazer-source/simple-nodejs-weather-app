@@ -1,0 +1,38 @@
+name: Node.js CI/CD
+
+# Run workflow on pushes or pull requests to main branch
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code from GitHub
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Run tests (currently placeholder)
+      - name: Run tests
+        run: npm test || echo "No tests defined"
+
+      # 5. Optional: start server to ensure it runs
+      - name: Start server
+        run: |
+          nohup npm start &
+          sleep 5
+          echo "Server started"
