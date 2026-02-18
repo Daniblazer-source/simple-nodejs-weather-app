@@ -3,9 +3,9 @@ name: Node.js CI/CD
 # Run workflow on pushes or pull requests to main branch
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
