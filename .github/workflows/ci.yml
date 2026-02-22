@@ -27,5 +27,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: YOUR_DOCKER_USERNAME/weather-app:latest
+          tags: daniblazer/weather-app:latest
 
