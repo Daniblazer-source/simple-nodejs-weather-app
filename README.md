@@ -10,3 +10,4 @@ node server.js
 ```
 ![gif](https://github.com/bmorelli25/simple-nodejs-weather-app/blob/master/giphy.gif?raw=true 'website gif')
 # trigger
+# trigger
